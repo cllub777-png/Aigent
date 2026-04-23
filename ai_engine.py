@@ -32,10 +32,10 @@ COMPILED_PATTERN = re.compile(
 
 
 class AIEngine:
-    def __init__(self, api_key: str, model: str = "grok-3-mini"):
+    def __init__(self, api_key: str, model: str = "llama-3.3-70b-versatile"):
         self.api_key = api_key
         self.model = model
-        self.base_url = "https://api.x.ai/v1/chat/completions"
+        self.base_url = "https://api.groq.com/openai/v1/chat/completions"
         self.headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
